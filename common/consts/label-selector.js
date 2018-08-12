@@ -1,4 +1,4 @@
-const WORKER_DEBUG = 'type=worker-debug'
+const WORKER_DEBUG = 'type=worker-debug';
 
 
 module.exports = {

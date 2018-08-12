@@ -2,7 +2,7 @@ ARG BASE_PRIVATE_REGISTRY=""
 FROM ${BASE_PRIVATE_REGISTRY}hkube/base-node:v1.0.0
 LABEL maintainer="yehiyam@gmail.com"
 RUN mkdir /hkube
-COPY . /hkube/algorithm-operator
-RUN cd /hkube/algorithm-operator
-WORKDIR /hkube/algorithm-operator
+COPY . /hkube/debugging-operator
+RUN cd /hkube/debugging-operator
+WORKDIR /hkube/debugging-operator
 CMD ["node", "app.js"]
