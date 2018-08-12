@@ -1,6 +1,6 @@
 const config = {};
 
-config.serviceName = 'algorithm-operator';
+config.serviceName = 'debugging-operator';
 
 config.kubernetes = {
     isLocal: !!process.env.KUBERNETES_SERVICE_HOST,
