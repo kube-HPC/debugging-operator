@@ -7,7 +7,6 @@ const Components = {
     ETCD: 'Etcd',
     K8S: 'K8S',
     OPERATOR: 'Operator',
-    METRICS: 'Metrics',
     RECONCILER: 'Reconciler'
 };
 

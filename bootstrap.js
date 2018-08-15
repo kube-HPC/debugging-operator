@@ -3,7 +3,6 @@ const Logger = require('@hkube/logger');
 const { main, logger } = configIt.load();
 const log = new Logger(main.serviceName, logger);
 const componentName = require('./common/consts/componentNames');
-const { tracer, metrics } = require('@hkube/metrics');
 const etcd = require('./lib/helpers/etcd.js');
 const kubernetes = require('./lib/helpers/kubernetes');
 const operator = require('./lib/operator');
@@ -18,8 +17,6 @@ class Bootstrap {
         try {
             this._handleErrors();
             log.info('running application in ' + configIt.env() + ' environment', { component: componentName.MAIN });
-           // await metrics.init(main.metrics);
-       //     await tracer.init(main.tracer);
             await Promise.all(modules.map(m => m.init(main)));
 
             return main;
